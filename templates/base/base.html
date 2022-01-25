@@ -1,0 +1,119 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>{% block title %} {% endblock %} </title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="{% static 'css/materialize.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+
+</head>
+
+<body>
+    <nav class=" blue darken-2" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="{% url 'home' %}" class="brand-logo">
+                <img height="60" width="160" src="/static/img/logo.png" alt="">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li style="font-weight: 900;">
+                    <a href="{% url 'schema-swagger-ui' %}">
+                        Clique e teste a API
+                    </a>
+                </li>
+                <li style="font-weight: 900;">
+                    <a href="{% url 'logout' %}">
+                        Sair <i class="material-icons right">exit_to_app</i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="{% url 'logout' %}">Sair</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <h1 class="header center">
+                <img height="320" src="/static/img/home.png" alt="" srcset="">
+            </h1>
+        </div>
+    </div>
+
+    {% block main %}
+    <div class=" container ">
+        <div class="section ">
+
+            <div class="row ">
+                <div class="col s12 m4 ">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% endblock %}
+
+    <footer class="page-footer blue darken-2 ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col l6 s12 ">
+                    <h5 class="white-text ">Dev Samuel</h5>
+                    <p class="text-lighten-4 ">
+                        Sou programador, <strong> que ama a programação, </strong> trabalhando neste projeto como se fosse meu trabalho em tempo integral. ;)
+                    </p>
+
+                </div>
+
+                <div class="col l3 s12 ">
+                    <h5 class="white-text ">Connect</h5>
+                    <ul>
+                        <li>
+                            <i class="bi bi-linkedin "></i>
+                            <a class="orange-text text-lighten-3 " target="_blank " href="https://www.linkedin.com/in/samuel-fernandes-400587182/ ">
+                                Linkedin
+                            </a>
+                        </li>
+                        <li class="magin-top ">
+                            <i class="bi bi-github "></i>
+                            <a class="orange-text text-lighten-3 " target="_blank " href="https://github.com/samueloliveiraf ">
+                                GitHub
+                            </a>
+                        </li>
+                        <li class="magin-top ">
+                            <i class="bi bi-whatsapp "></i>
+                            <a class="orange-text text-lighten-3 " href="https://api.whatsapp.com/send?phone=5583998123917&text=Ol%C3%A1...%20Vim%20pelo%20site%20DevSamuel ">
+                                Suporte
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright ">
+            <div class="container ">
+                Copyright © 2021
+                <a class="orange-text text-lighten-3 " target="_blank " href="https://samueloliveiraf.github.io/site-devsamuel/ ">
+                    Dev Samuel
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js "></script>
+    <script src="{% static 'js/materialize.min.js' %} "></script>
+    <script src="{% static 'js/init.js' %} "></script>
+    <script src="{% static 'js/api.js' %} "></script>
+
+</body>
+
+</html>
